@@ -1,0 +1,35 @@
+{
+  "driveInitTimeout": 30000,
+  "driverRequestTimeout": 60000,
+  "driverMaxMemoryMb": 50,
+  "server": {
+    "allow": true,
+    "port": 80,
+    "internalOnly": false,
+    "secure": {
+      "allow": false,
+      "port": 443,
+      "ssl" : {
+        "fullchain": "../ssl/fullchain.pem",
+        "privkey": "../ssl/privkey.pem"
+      }
+    }
+  },
+  "ws": {
+    "allow": true,
+    "maxPayload": 10485760
+  },
+  "drivers": ["speaker", "alice-skill", "alice-iot", "alexsk", "yeelight"],
+  "logger": {
+    "file": "./logs/service-info.log",
+    "fileError": "./logs/service-error.log",
+    "fileWarn": "./logs/service-warn.log",
+    "modules": {
+      "default": "INFO",
+      "driver-manager": "INFO",
+      "driver-handler": "INFO",
+      "driver-process": "INFO",
+      "hardware": "INFO"
+    }
+  }
+}

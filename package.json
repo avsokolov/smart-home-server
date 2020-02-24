@@ -1,0 +1,36 @@
+{
+  "name": "@alexsk/smart-home-server",
+  "version": "1.2.0",
+  "scripts": {
+    "start": "node builder build --prod webpack.ext.js",
+    "build": "node builder serve-node-app webpack.ext.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "helmet-csp": "^2.9.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "multer": "^1.4.2",
+    "parse-rss": "^1.0.3",
+    "winston": "2.2.0",
+    "yeelight-wifi": "^2.3.0"
+  },
+  "devDependencies": {
+    "@alexsk/builder": "1.1.32",
+    "@types/express": "4.17.0",
+    "@types/jest": "24.0.9",
+    "@types/node": "~8.9.4",
+    "@typescript-eslint/eslint-plugin": "2.3.2",
+    "@typescript-eslint/parser": "2.3.2",
+    "eslint": "6.1.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "2.19.1",
+    "jest": "24.1.0",
+    "prettier": "1.18.2",
+    "tslint": "~5.11.0",
+    "typescript": "~3.5.3"
+  }
+}
